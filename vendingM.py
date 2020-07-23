@@ -17,9 +17,11 @@ class Vending:
     def addprod(self, product, amount):
         if product in self.products:
             self.products[product] += int(amount)
+            print("is in")
         else:
             self.products[product] = int(amount)
-        
+            print("is not in")
+
 
 class Product:
     def __init__(self, id, name, price):
