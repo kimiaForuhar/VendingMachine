@@ -1,23 +1,19 @@
-from Vending import vendingM
+class test1():
+    def __init__(self,id):
+        self.id=id
 
-m = int(input())
-productList = []
-vendingList = []
-for i in range(m):
-    id = int(input())
-    name = input()
-    price = int(input())
-    productList.append(vendingM.Product(id, name, price))
+    def getid(self,i):
+        return i+1
 
-for j in range(int(input())):
-    vendingList.append(vendingM.Vending(j))
-    p = input().split()
-    for k in range(1, len(p)):
-        vendingList[j].addprod(int(k), 1)
 
-for t in range(int(input())):
-    inp = input().split()
-    vendingList[int(inp[0]) - 1].buy(int(inp[1]) - 1)
+class test2():
+    def __init__(self,name):
+        self.name=name
 
-for h in range(len(vendingList)):
-    print(h, ":", vendingList[h].saleamount, ",", vendingList[h].salecount)
+    def kkk(self,j):
+        print(test1(1).getid(j))
+
+
+t=test2()
+t.kkk(1)
+test2('kim').kkk(1)
